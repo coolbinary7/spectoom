@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: spectoom
+    runtime: docker
+    plan: 2c-4g
+    healthCheckPath: /api/health
+    numInstances: 1
+    envVars:
+      - key: SPECTOOM_ENV
+        value: production
+      - key: SPECTOOM_DATA_DIR
+        value: /var/data/spectoom
+      - key: SPECTOOM_SECURE_COOKIES
+        value: "1"
+      - key: SPECTOOM_COOKIE_NAME
+        value: spectoom_session
+      - key: SPECTOOM_SEED_DEMO
+        value: "0"
+      - key: SPECTOOM_USER_NAME
+        sync: false
+      - key: SPECTOOM_USER_EMAIL
+        sync: false
+      - key: SPECTOOM_USER_PASSWORD
+        sync: false
+      - key: SPECTOOM_ADMIN_NAME
+        sync: false
+      - key: SPECTOOM_ADMIN_EMAIL
+        sync: false
+      - key: SPECTOOM_ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: spectoom-data
+      mountPath: /var/data
+      sizeGB: 20

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfbf8">
+  <meta name="color-scheme" content="light">
+  <title>Spectoom — Studio vidéo musical</title>
+  <meta name="description" content="Spectoom, outil interne de génération de vidéos musicales.">
+  <link rel="stylesheet" href="/static/styles.css?v=2.2.2-cloud">
+</head>
+<body>
+  <div id="app" aria-live="polite">
+    <div class="boot-screen">
+      <img src="/static/brand/spectoom-black.png?v=2.2.2-cloud" alt="Spectoom" class="boot-logo">
+      <div class="boot-loader" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p>Préparation de ton studio…</p>
+    </div>
+  </div>
+  <div id="toast-root" class="toast-root" aria-live="assertive"></div>
+  <audio id="preview-audio" preload="metadata" crossorigin="anonymous"></audio>
+  <script src="/static/app.js?v=2.2.2-cloud" defer></script>
+</body>
+</html>
