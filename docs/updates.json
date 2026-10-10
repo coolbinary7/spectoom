@@ -1,0 +1,21 @@
+{
+  "releases": [
+    {
+      "version": "2.8.1",
+      "channel": "Windows · Local",
+      "date": "2026-10-10",
+      "dateLabel": "10 octobre 2026",
+      "summary": "Une mise à jour de Spectoom Local qui rassemble les outils récents de création et fiabilise le lancement sous Windows.",
+      "features": [
+        "RBT (Ring Back Tones) : un outil dédié à la préparation des sonneries de retour d’appel.",
+        "Import et export de projets pour faciliter leur transfert et leur sauvegarde.",
+        "Rendus annulables et aperçu en direct du milestone vidéo."
+      ],
+      "fixes": [
+        "Le lanceur Windows vérifie si Spectoom est déjà ouvert et contrôle sa version avant d’ouvrir l’interface.",
+        "Le démarrage évite de relancer une ancienne instance ou un autre programme utilisant le port 8080.",
+        "L’ouverture du navigateur attend la disponibilité de la version attendue, avec une durée d’attente limitée."
+      ]
+    }
+  ]
+}
