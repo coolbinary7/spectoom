@@ -15,7 +15,8 @@
         "Le lanceur Windows vérifie si Spectoom est déjà ouvert et contrôle sa version avant d’ouvrir l’interface.",
         "Le démarrage évite de relancer une ancienne instance ou un autre programme utilisant le port 8080.",
         "L’ouverture du navigateur attend la disponibilité de la version attendue, avec une durée d’attente limitée."
-      ]
+      ],
+      "downloadUrl": "./downloads/Spectoom-Local-2.8.1-Windows.zip"
     }
   ]
 }
