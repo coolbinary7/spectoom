@@ -47,7 +47,7 @@
     li{position:relative;padding-left:15px;color:#4f514b;font-size:12px;line-height:1.55}
     li:before{content:"";position:absolute;left:0;top:.57em;width:5px;height:5px;border-radius:50%;background:var(--red)}
     .fix li:before{background:#33865a}
-    .download{display:inline-flex;align-items:center;margin-top:20px;padding:12px 18px;border-radius:10px;background:var(--red);color:#fff;font-size:13px;font-weight:750;text-decoration:none}
+    .download{display:inline-flex;align-items:center;margin-top:20px;margin-right:12px;padding:12px 18px;border-radius:10px;background:var(--red);color:#fff;font-size:13px;font-weight:750;text-decoration:none}
     .download:hover{background:#ce1c32}.download:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
     .loading,.error{border:1px dashed #d6d7d1;border-radius:15px;padding:24px;color:var(--muted);font-size:13px}
     footer{border-top:1px solid var(--line);padding:24px 0 42px;color:var(--muted);font-size:11px;display:flex;justify-content:space-between;gap:18px}
@@ -95,7 +95,7 @@
           document.querySelector('#current-date').textContent = 'Dernière fiche : ' + latest.dateLabel;
         }
         document.querySelector('#release-count').textContent = releases.length + (releases.length > 1 ? ' versions' : ' version');
-        list.innerHTML = releases.map((release,index) => '<article class="release"><div class="release-top"><div class="release-title"><h3>Spectoom '+esc(release.version)+'</h3>'+(index===0?'<span class="latest">Dernière version</span>':'')+'</div><time class="release-date" datetime="'+esc(release.date)+'">'+esc(release.dateLabel)+' · '+esc(release.channel)+'</time></div><p class="release-summary">'+esc(release.summary)+'</p><div class="details"><section class="detail"><h4>Nouveautés</h4><ul>'+items(release.features)+'</ul></section><section class="detail fix"><h4>Corrections</h4><ul>'+items(release.fixes)+'</ul></section></div>'+(release.downloadUrl?'<a class="download" href="'+esc(release.downloadUrl)+'" download>Télécharger Spectoom '+esc(release.version)+' pour Windows</a>':'')+'</article>').join('');
+        list.innerHTML = releases.map((release,index) => '<article class="release"><div class="release-top"><div class="release-title"><h3>Spectoom '+esc(release.version)+'</h3>'+(index===0?'<span class="latest">Dernière version</span>':'')+'</div><time class="release-date" datetime="'+esc(release.date)+'">'+esc(release.dateLabel)+' · '+esc(release.channel)+'</time></div><p class="release-summary">'+esc(release.summary)+'</p><div class="details"><section class="detail"><h4>Nouveautés</h4><ul>'+items(release.features)+'</ul></section><section class="detail fix"><h4>Corrections</h4><ul>'+items(release.fixes)+'</ul></section></div>'+(release.downloadUrl?'<a class="download" href="'+esc(release.downloadUrl)+'" download>Télécharger Spectoom '+esc(release.version)+' pour Windows</a>':'')+(release.macDownloadUrl?'<a class="download" href="'+esc(release.macDownloadUrl)+'" download>Télécharger Spectoom '+esc(release.version)+' pour macOS</a>':'')+'</article>').join('');
       })
       .catch(() => { list.innerHTML = '<div class="error">Le journal ne peut pas être chargé pour le moment. Réessayez dans quelques instants.</div>'; });
   </script>

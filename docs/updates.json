@@ -2,7 +2,7 @@
   "releases": [
     {
       "version": "2.8.1",
-      "channel": "Windows · Local",
+      "channel": "Windows & macOS · Local",
       "date": "2026-10-10",
       "dateLabel": "10 octobre 2026",
       "summary": "Une mise à jour de Spectoom Local qui rassemble les outils récents de création et fiabilise le lancement sous Windows.",
@@ -16,7 +16,8 @@
         "Le démarrage évite de relancer une ancienne instance ou un autre programme utilisant le port 8080.",
         "L’ouverture du navigateur attend la disponibilité de la version attendue, avec une durée d’attente limitée."
       ],
-      "downloadUrl": "./downloads/Spectoom-Local-2.8.1-Windows.zip"
+      "downloadUrl": "./downloads/Spectoom-Local-2.8.1-Windows.zip",
+      "macDownloadUrl": "./downloads/Spectoom-Local-2.8.1-macOS.zip"
     }
   ]
 }
